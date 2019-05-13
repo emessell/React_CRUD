@@ -1,0 +1,47 @@
+@import "../basic";
+
+.orangePadding{
+  background: @carrot;
+  padding: 1em 0;
+}
+
+@media @tablet{
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+.main{
+  background: @green;
+  padding: 1em;
+
+  @media @tablet{
+    background: @carrot;
+  }
+  @media @desktop{
+    background: @green;
+  }
+  .subject, .TOC, .crud{
+    .orangePadding();
+  }
+  .crud{
+    input[type='button']{
+      border: none;
+      padding: 0.3em;
+      background: @concrete;
+      margin: 0.5em;
+    }
+  }
+}
